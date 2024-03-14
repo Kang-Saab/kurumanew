@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kuruma</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='create2.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='basecss.css') }}">
+</head>
+<body>
+    <div id="main">
+        <div id="back">
+            <!-- <img src="images/background (2).png" alt=""> -->
+            
+        </div>
+        <div id="top">
+            <div id="workingarea">
+                <div id="nav">
+                    <div id="nleft">
+                        <div class="logo" style="display: flex; justify-content: center; align-items: center;">    
+                            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                            
+                            <a style="margin-left: 10px; font-weight: 500"><b>kuruma</b></a>
+                        </div>
+                        <a href="/community_show">Community</a>
+                        <a href="/about">about</a>
+                        <a href="/contact">contact</a>
+                    </div>
+                    <div id="nright">
+                        <!-- <a href="/login">Login</a> -->
+                        <!-- <a href="/signup">Sign UP</a> -->
+                        <a style="background-color: white; padding: 10px; color: black;" href="/generate">Generate Image</a>
+                    </div>
+                </div>
+                <div id="create">
+                    <div class="prompt">
+                        <div class="prompt-form">
+                            <form action="/generate" method="POST">
+                                <div class="pt" style="display: flex;">
+                                    <img src="{{ url_for('static', filename='images/text.png') }}" alt="" style="width: 18px; ">
+                                    
+                                    <h4>Prompt</h4>
+                                </div>
+                                <textarea type="text" id="prompt" name="prompt" placeholder="Enter your Prompt" required></textarea>
+                                <input id="crtimg" type="submit" style="display: none;">
+                            
+                                <button type="button" class="accordion">
+                                    <div class="negtt" style="display: flex;">
+                                        <img src="{{ url_for('static', filename='images/neg-text.png') }}" alt="" style="width: 18px; margin-right: 10px;">
+                                        Negitive Prompt
+                                        
+                                    </div>
+                                </button>
+                                <div class="panel">
+                                    <div class="pt" style="display: flex;">
+                         
+                                        <h4 id="kang">Negitive Prompt</h4>
+                                    </div>
+                                    <textarea type="text" id="negprompt" name="negprompt" placeholder="Enter Negitive your Prompt" style="height: 80px;"></textarea>
+                                </div>
+                                <div class="noofimg">
+                                    <div class="no-left">
+                                        <div class="negtt" style="display: flex;">
+                                            <img src="{{ url_for('static', filename='images/count.png') }}" alt="" style="width: 18px; margin-right: 10px;">
+                                            
+                                            No. of Images (max. 1)
+                                        </div>
+                                    </div>
+                                    <div class="no-right">
+                                        <input id="num_images" name="num_images" type="number" max="1" min="1" id="num" value="1" required>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="submit">
+                            <div class="space" style="width: 01px;"></div>
+                            <button onclick="document.querySelector('#crtimg').click()" type="submit" name="" id="">Generate</button>
+                        </div>
+                    </div>
+                    <div class="images">
+                        <div class="content content--side">
+                            <!-- <style>
+                                .poster{
+                                    background-image: url("{{ url_for('static', filename='images/img_back.png') }}");
+                                }
+                            </style> -->
+                            <div class="poster" style="background-image: url('{{ url_for('static', filename='images/img_back.png') }}');"></div>
+                            
+                            <div class="canvas-wrap">
+                                <canvas></canvas>
+                            </div>
+                            <img src="{{ url_for('static', filename='images/stamp.png') }}" alt="" style="z-index: 1; width: 25%; padding-bottom: 160px;">
+                            
+                            <!-- <nav class="demos">
+                                <a class="demo demo--current" href="index.html"><span>Demo 1</span></a>
+                                <a class="demo" href="index2.html"><span>Demo 2 (reverse)</span></a>
+                            </nav> -->
+                            <!-- <a class="github" href="https://github.com/codrops/PasswordStrengthVisualization/" title="Find this project on GitHub"><svg class="icon icon--github"><use xlink:href="#icon-github"></use></svg></a> -->
+                        </div>
+                    </div>
+                </div>
+                <!-- <h1>hlo</h1><br>hlo -->
+                
+            </div>
+            
+        </div>
+    </div>
+
+
+
+    <script src="{{ url_for('static', filename='js/imagesloaded.pkgd.min.js') }}"></script>
+<script src="{{ url_for('static', filename='js/zxcvbn.js') }}"></script>
+<script src="{{ url_for('static', filename='js/demo1.js') }}"></script>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+              document.querySelector("#negprompt").value = "";
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            } 
+          });
+        }
+
+
+        </script>
+</body>
+</html>
