@@ -1,0 +1,6 @@
+!pip install diffusers["torch"] transformers
+!pip install accelerate
+!pip install git+https://github.com/huggingface/diffusers
+
+!pip install pyngrok
+!USE_NGROK=True NGROK_AUTHTOKEN="2U6skXYUUXG1jmd6Wvxrx0zKzgC_6u8DukSTe1HTNzKZaqWST" FLASK_APP=myserver.py flask run
