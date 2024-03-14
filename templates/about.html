@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
+    
+</head>
+<body>
+    <div id="main">
+        <div id="back" class="back1">
+            <!-- <img src="images/IMG_7564.JPG" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/IMG_7564.JPG') }}" alt=""> -->
+            <img src="{{ url_for('static', filename='images/ab1.jpg') }}" alt="">
+            
+            <!-- <img src="images/IMG_7565.JPG" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/IMG_7565.JPG') }}" alt=""> -->
+            <img src="{{ url_for('static', filename='images/hero1.JPG') }}" alt="">
+            
+            <!-- <img src="images/IMG_7566.JPG" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/IMG_7566.JPG') }}" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/hero3.JPG') }}" alt="">
+            
+            <img src="images/IMG_7567.JPG" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/IMG_7567.JPG') }}" alt=""> -->
+            
+            <!-- <img src="images/IMG_7568.JPG" alt=""> -->
+            <!-- <img src="{{ url_for('static', filename='images/IMG_7568.JPG') }}" alt=""> -->
+             
+        </div>
+        <div id="top">
+            <div id="workingarea">
+                <div id="nav">
+                    <div id="nleft">
+                        <div class="logo" style="display: flex; justify-content: center; align-items: center;">    
+                            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                            
+                            <a style="margin-left: 10px; font-weight: 500"><b>kuruma</b></a>
+                        </div>
+                        <a href="/community_show">Community</a>
+                        <a href="/about">about</a>
+                        <a href="/contact">contact</a>
+                    </div>
+                    <div id="nright">
+                        <a href="/login">Login</a>
+                        <a href="/signup">Sign UP</a>
+                        <a style="background-color: white; padding: 10px; color: black;" href="/generate">Generate Image</a>
+                    </div>
+                </div>
+                <div id="hero">
+                    <div id="heroleft">
+                        <div class="elem">
+                            <h1>About</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                        </div>
+                        <div class="elem">
+                            <h1>us</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                        </div>
+                        <!-- <div class="elem">
+                            <h1>Some Art</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                            <h1>karan kang</h1>
+                        </div> -->
+                        
+                        <!-- <a style="pointer-events: all;" href="#about">
+
+                            <button>Learn More</button>
+                        </a> -->
+                    </div>
+                    <!-- <div id="heroright">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                        <div class="imagediv"></div>
+                        <p id="herop1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate quos ducimus beatae?</p>
+                        <p id="herop2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio tempora provident nisi molestiae iste?</p>
+                    </div> -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="#about" class="section3">
+        <div class="section3-cont">
+            <div class="sec3-right">
+                <h1>About US</h1>
+                <p>  At our cutting-edge AI lab we pioneer the fusion <br>of creativity and technology. With state-of-the-art <br> algorithms, our text-to-image generation AI brings <br> imagination to life. From vivid landscapes to intricate <br> portraits, we empower users to transform words into <br>captivating visuals. Join us on the journey of boundless <br>expression. Welcome to our innovation hub.</p>
+                
+                <a href="/contact">Contact Us</a>
+            </div>
+            <div class="sec3-left back2">
+                <img src="{{ url_for('static', filename='images/about.JPG') }}" alt="">
+                <!-- <div class="back2">
+                </div> -->
+            </div>
+            
+        </div>
+    </div>
+    <div class="section2">
+        <!-- <div class="">hlo</div> -->
+        <div class="section-cont">
+            <img src="{{ url_for('static', filename='images/chip.png') }}" alt="">
+            <h1>Start Generating Without Any Limits <br> <i>For Free</i></h1>
+            <a href="/generate">Generate Now</a>
+            <div class="image-div-sec2">
+                <img src="{{ url_for('static', filename='images/sec2.jpg') }}" alt="">
+            </div>
+        </div>
+    </div>
+   
+
+    <footer>
+        <div class="ft-logo">
+            <div class="logo" style="display: flex; align-items: center;">    
+                <img style="width: 5%;" src="{{ url_for('static', filename='images/logo.png') }}" alt="">
+                
+                <a style="margin-left: 10px; font-weight: 500; margin-bottom: 0 !important;"><b>Kuruma</b></a>
+            </div><br>
+            <p>Create stunning Ai Images <br>Unlimted and Free</p>
+        </div>
+        <div class="product">
+            <h2>Useful Links</h2><br>
+            <a href="/generate">Generate Images</a>
+            <a href="/community_show">View Community</a>
+        </div>
+        <div class="ft-contact">
+            <h2>Know More</h2><br>
+            <a href="/about">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="ft-socila">
+            <h2>Connect</h2><br>
+            <a href="https://github.com/Kang-Saab/">Github</a>
+            <a href="https://www.instagram.com/_karanvirkang_/">Instagram</a>
+            <!-- <a href="">Facebook</a> -->
+            <a href="https://in.pinterest.com/karan2kangcreator/">Pinterest</a>
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="{{ url_for('static', filename='js/scrollnavbar.js') }}"></script>
+
+    <script  type="text/javascript"  src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+    <!-- <script src="app.js"></script> -->
+    <!-- {{ url_for('static', filename='js/index.js') }} -->
+</body>
+</html>

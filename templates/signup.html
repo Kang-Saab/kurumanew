@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Password Strength Visualization | Demo 1 | Codrops</title>
+		<meta name="description" content="Visual feedback for password strength on an image that gets pixelated or blurred." />
+		<meta name="keywords" content="password strength, visual feedback, image, canvas, javascript, css, blur, pixelated" />
+		<meta name="author" content="Codrops" />
+		<!-- <link rel="shortcut icon" href="favicon.ico"> -->
+		<link rel="stylesheet" href="{{ url_for('static', filename='signup.css') }}">
+		<!-- <link rel="stylesheet" type="text/css" href="css/base.css" /> -->
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="demo-1 loading">
+		<main>
+			<div class="content content--side">
+				<header class="codrops-header">
+					
+					<img src="{{ url_for('static', filename='images/logo_black.png') }}" style="width: 10%;" alt="">
+					<h3 class="codrops-header__title">Kururma</h3>
+					
+					<p class="info"><b>Create an account</b> to start generating images, <br> or view images in <a href="/community_show"> Community</a></p>
+				</header>
+				<form class="form" action="" method="">
+					<div class="form__item">
+						<label class="form__label" for="email">Full Name</label>
+						<input class="form__input" type="text" name="name" id="name">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="email">Email Address</label>
+						<input class="form__input" type="email" name="email" id="email">
+					</div>
+					<div class="form__item">
+						<label class="form__label" for="password">Password</label>
+						<div class="form__input-wrap">
+							<input class="form__input" type="password" name="password" id="password">
+							<p class="form__password-strength" id="strength-output"></p>
+						</div>
+					</div>
+					<div class="form__item form__item--actions">
+						<span>Already have an account? <a class="form__link" href="/login">Login here</a></span>
+						<input class="form__button" type="button" name="signup" value="Signup">
+					</div>
+				</form>
+			</div>
+			<div class="content content--side">
+				
+				<div class="poster" style="background-image:url({{ url_for('static', filename='images/signin.jpg') }})"></div>
+				<div class="canvas-wrap">
+					<canvas></canvas>
+				</div>
+			</div>
+		</main>
+		<!-- <link rel="stylesheet" href="">
+		<script src="js/imagesloaded.pkgd.min.js"></script>
+		<script src="js/zxcvbn.js"></script>
+		<script src="js/demo1.js"></script> -->
+		
+		
+		<script src="{{ url_for('static', filename='jquery/imagesloaded.pkgd.min.js') }}"></script>
+		
+		<script src="{{ url_for('static', filename='jquery/zxcvbn.js') }}"></script>
+		<script src="{{ url_for('static', filename='jquery/signin.js') }}"></script>
+		
+		
+	</body>
+</html>

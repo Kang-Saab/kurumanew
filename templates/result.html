@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generated Images</title>
+</head>
+<body>
+    <h1>Generated Images for Prompt: {{ prompt }}</h1>
+    {% if images %}
+        <ul>
+        {% for image in images %}
+            <li>
+                <img src="data:image/png;base64,{{ image.data }}" alt="Generated Image {{ image.id }}">
+            </li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No images were generated.</p>
+    {% endif %}
+</body>
+</html>
