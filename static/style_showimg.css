@@ -1,0 +1,25 @@
+#heroright{
+    width: 50% !important;
+    /* background-color: #ffffff38; */
+}
+.showimage{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+.showimage img{
+    width: 64%;
+}
+.img_details{
+    padding: 10px;
+}
+.img_details h2{
+    font-family: "kajiro";
+    font-size: 4vw;
+    font-weight: 100;
+}
+#heroleft .elem {
+    height: 26vw;
+    overflow: hidden;
+    /* background-color: red; */
+}

@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Gilroy Light";
+}
+@media screen and (max-width: 1000px) {
+    #hero #heroright {
+      display: none;
+    }
+    #heroright {
+        display: none;
+    }
+    #hero{
+        justify-content: center !important;
+    }
+    #heroleft{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #heroleft .elem{
+        text-align: center;
+        height: 17vw !important;
+    }
+    #heroleft .elem h1{
+        font-size: 19vw !important;
+    }
+    #heroleft button{
+        font-size: 7vw !important;
+    }
+  }
+@media screen and (max-width: 1300px) {
+    #herop2{
+        display: none;
+    }
+  }
+html, body{
+    width: 100%;
+    height: 100%;
+}
+#main{
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.244);
+}
+#back{
+    width: 100%;
+    height: 100vh;
+    background-color: red;
+}
+#back img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#top{
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* background-color: black; */
+}
+#workingarea{
+    position: relative;
+    margin: 0 auto ;
+    width: 80%;
+    height: 100vh;
+    max-width: 1920px;
+    /* border: 1px solid red; */
+}
+#nav{
+    display: flex;
+    justify-content: space-between;
+    width: 79vw;
+    padding: 20px 0;
+    position: fixed;
+}
+#nav img{
+    height: 50px;
+}
+#nleft, #nright{
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+#nav a{
+    pointer-events: all;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    /* letter-spacing: 1px; */
+    color: #fff;
+    font-family: "Gilroy Light";
+}
+
+#hero{
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(0%, -50%);
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    /* height: 100px; */
+    /* background-color: red; */
+}
+#heroleft{
+    min-width: 50%;
+    /* height: 100px; */
+    /* background-color: yellow; */
+}
+#heroleft .elem{
+    height: 9vw;
+    overflow: hidden;
+    /* background-color: red; */
+}
+#heroleft .elem h1{
+    line-height: .9;
+    font-family: "kajiro";
+    color: #fff;
+    font-weight: 100;
+    font-size: 11vw;
+}
+#heroleft button{
+    pointer-events: all;
+    cursor: pointer;
+    padding-top: .3vw !important;
+    padding: .1vw 3vw;
+    font-size: 2vw;
+    margin-top: 2vw;
+    font-family: "kajiro";
+    border: none;
+}
+#heroright{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 18%;
+    /* height: 100px; */
+    /* background-color: green; */
+    color: #fff;
+}
+#heroright p{
+    /* margin-bottom: 50px; */
+    font-size: 11px;
+    font-weight: 300;
+    text-align: right;
+}
+#heroright .imagediv{
+    min-width: 227px;
+    width: 75%;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    height: 170px;
+    background-image: url('images/kian-mousazadeh-mre3yLorGtM-unsplash.jpg')
+}
+#heroright p:nth-child(3){
+    margin-bottom: 100px;
+}
+.section2{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    overflow: hidden;
+}
+.section-cont{
+    /* background: red;
+     */
+     /* background: rgb(151,233,233);
+     background: linear-gradient(0deg, rgba(151,233,233,0.7847514005602241) 9%, rgba(89,113,241,1) 100%); */
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 30px;
+    padding-top: 50px;
+    /* overflow: hidden; */
+    /* transition: transform 1s; */
+}
+
+.section-cont img{
+    margin-bottom: 20px;
+}
+.section-cont h1{
+    color: white;
+    /* font-family: "kajiro"; */
+    font-family: "Gilroy extrabold";
+    font-size: 2rem;
+    font-weight: 100;
+}
+.image-div-sec2{
+    width: 70%;
+    height: 100%;
+    /* background: red; */
+    padding: 51px;
+    padding-bottom: 0;
+    /* overflow: hidden; */
+    transition: .5s;
+}
+.image-div-sec2 img{
+    width: 100%;
+    border-radius: 20px;
+}
+.image-div-sec2:hover{
+    width: 65%;
+    /* border-radius: 20px; */
+}
+.section3{
+    WIDTH: 100%;
+    height: 100vh;
+    overflow: hidden;
+    padding: 10%;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    background: #80edc512;
+}
+.section3-cont{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    gap: 185px;
+    /* background: red; */
+}
+.sec3-left{
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+}
+.sec3-right{
+    padding-left: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+.sec3-right h1{
+    font-family: "kajiro";
+    font-size: 9rem;
+    font-weight: 100;
+}
+.sec3-right a, .section-cont a{
+    text-decoration: none;
+    color: white;
+    background: black;
+    padding: 15px;
+    margin-top: 10px;
+    max-width: 197px;
+    text-align: center;
+}
+.section-cont a{
+    background: white;
+    color: black;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.name-mail{
+    display: flex;
+}
+form input{
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    margin-right: 8px;
+    flex: 1;
+    color: black;
+}
+form textarea{
+    padding: 20px;
+    background: white;
+    border: 2px solid black;
+    resize: none;
+    /* margin-top: 10px; */
+}
