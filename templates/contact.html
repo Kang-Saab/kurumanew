@@ -8,7 +8,27 @@
     <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='navbar.css') }}">
-    
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "AYpCYBoikzxjRH6wH",
+      });
+   })();
+</script>
+<script>
+    function sendMail(){
+        let params = {
+            name: document.getElementById("name").value,
+            email: document.getElementById("email").value,
+            message: document.getElementById("message").value,
+        }
+
+        emailjs.send("service_6r1g72u","template_t1tgnrn",params).then(alert("Email Sent"));
+    }
+</script>
 </head>
 <body>
     <div id="main">
@@ -100,14 +120,16 @@
             </div>
             <div class="sec3-left">
                 <h2>Contact Form</h2><br>
-                <form action="">
+                <form>
                     <div class="name-mail">
-                        <input type="text" placeholder="Your Name">
-                        <input type="email" placeholder="Email-ID">
+                        <input type="text" id="name" placeholder="Your Name">
+                        <input type="email" id="email" placeholder="Email-ID">
                     </div>
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Enter your Message"></textarea>
-                    <input style="max-width: 180px; cursor: pointer;" type="submit" name="" id="" value="Send Message">
+                    <textarea name="" id="message" cols="30" rows="10" id="message" placeholder="Enter your Message"></textarea>
+                    <!-- <input style="max-width: 180px; cursor: pointer;" type="submit" name="" id="" value="Send Message"> -->
+                    <button style="max-width: 180px; cursor: pointer;" type="button" onclick="sendMail()">Send Message</button>
                 </form>
+
                 <!-- <img src="{{ url_for('static', filename='images/ifc.JPG') }}" alt=""> -->
                 <!-- <div class="back2">
                 </div> -->
