@@ -273,7 +273,7 @@ form{
 .name-mail{
     display: flex;
 }
-form input{
+form input, button{
     padding: 20px;
     background: white;
     border: 2px solid black;
